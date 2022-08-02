@@ -61,6 +61,7 @@ def answerQuestion(question):
         count+=1
         if count==10:
             driver.close()
+            driver.quit()
             time.sleep(2)
             return eel.complete()
         return answerQuestion(questions[count])
@@ -117,6 +118,7 @@ def settle():
     count+=1
     if count==10:
         driver.close()
+        driver.quit()
         time.sleep(2)
         return eel.complete()
     return answerQuestion(questions[count])
